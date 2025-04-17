@@ -23,4 +23,5 @@ public class qqq {
             System.out.print((int) (c[i].getArea()) +  "");
     }
      
+    
 }

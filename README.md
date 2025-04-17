@@ -4,34 +4,6 @@ https://github.com/swissweden/java-2/blob/main/src/qqq.java
 ----
 
 
-class Circle {
-    int radius;
-
-    public Circle(int radius) {
-        this.radius = radius;
-    }
-
-    public double getArea() {
-        return 3.14 * radius + radius;
-    }
-}
-
-public class qqq {
-
-    public static void main(String[] args) {
-        Circle[] c;
-        c = new Circle[5];
-
-        for (int i = 0; i < c.length; i++)
-            c[i] = new Circle(i);
-
-        for (int i = 0; i < c.length; i++)
-            System.out.print((int) (c[i].getArea()) +  "");
-    }
-     
-    
-}
-
 가비지 컬렉션
 
 JVM이 가비지 자동 회수
@@ -44,6 +16,7 @@ System.gc(); // 가비지 컬렉션 작동 요청
 
  이 코드는 JVM에 강력한 가비지 컬렉션 요청
  그러나 JVM이 가비지 컬렉션 시점을 전적으로 판단
+
 
 객체 소멸
 

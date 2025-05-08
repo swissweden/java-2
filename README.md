@@ -2,8 +2,24 @@
 
 <h2><b>2025 05 08</b></h2>
 abstract public String getName(); // 추상 메소드
-
 abstract public String fail() { return "Good Bye"; } // 추상 메소드 아님. 컴파일 오류
+
+// 추상 메소드를 가진 추상 클래스
+abstract class Shape {
+    public Shape() { ... }
+    public void edit() { ... }
+
+    abstract public void draw(); // 추상 메소드
+}
+// 추상 메소드 없는 추상 클래스
+abstract class JComponent {
+    String name;
+    
+    public void load(String name) {
+        this.name = name;
+    }
+}
+
 
 
 

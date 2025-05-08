@@ -1,27 +1,64 @@
 <h1>202230110 류준상</h1>
 
+<i>컴퓨터의 잦은 초기화로 인해서 커밋이 제대로 되지 않고 있습니다 죄송합니다
+대신 이곳에 학습내용을 최대한 보기 좋게 작성하겠습니다</i>
+
 <h2><b>2025 05 08</b></h2>
 
-abstract public String getName();  추상 메소드
+abstract public String getName();  추상 메소드  
 abstract public String fail() { return "Good Bye"; }  추상 메소드 아님. 컴파일 오류
 
-추상 메소드를 가진 추상 클래스
+<b>추상 메소드를 가진 추상 클래스</b>
 
-'''
+```
 abstract class Shape {
     public Shape() { ... }
     public void edit() { ... }
     abstract public void draw();  추상 메소드
 }
-'''
+```
 
-추상 메소드 없는 추상 클래스
+<b>추상 메소드 없는 추상 클래스</b>
+```
 abstract class JComponent {
     String name;
     public void load(String name) {
         this.name = name;
     }
 }
+```
+추상 메소드를 상속받으면 추상클래스가 됨
+```
+abstract class A {  추상 클래스
+    abstract public int add(int x, int y);  추상 메소드
+}
+
+abstract class B extends A {  추상 클래스
+    public void show() {
+        System.out.println("B");
+    }
+}
+
+A a = new A(); 컴파일 오류 추상 클래스의 인스턴스 생성 불가
+B b = new B(); 아래도 동일하게 오류
+
+```
+추상 클래스를 구현한 서브 클래스는 추상 클래스가 아님 상속 X
+(부분적으로만 가져온것)
+```
+class C extends A { // 추상 클래스 구현. C는 정상 클래스
+    public int add(int x, int y) {
+        return x + y; // 추상 메소드 구현. 오버라이딩
+    }
+
+    public void show() {
+        System.out.println("C");
+    }
+}
+
+C c = new C();  정상 실행
+
+```
 
 
 
@@ -29,7 +66,8 @@ abstract class JComponent {
 
 
 
-버 접근 지정
+<h2>2025 1학기 중간고사 범위</h2>
+멤버 접근 지정
 
  public 멤버: 패키지에 관계없이 모든 클래스에게 접근 허용<br/>
  private 멤버: 동일 클래스 내에만 접근 허용. 상속 받은 서브 클래스에서 접근 불가.<br/>

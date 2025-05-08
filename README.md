@@ -5,8 +5,46 @@
 
 <h2><b>2025 05 08</b></h2>
 
+<b>패키지(package)</b>
+
+서로 관련된 클래스와 인터페이스를 컴파일한 클래스 파일들을 묶어 놓은 디렉터리
+
+하나의 응용프로그램은 한 개 이상의 패키지로 작성
+
+패키지는 jar 파일로 압축할 수 있음
+
+<b>모듈(module)</b>
+
+여러 패키지와 이미지 등의 자원을 모아 놓은 컨테이너
+
+하나의 모듈을 하나의 .imod 파일에 저장  
+  
+
+---  
+
+
+
+소프트웨어를 규격화된 모듈로 만들고, 인터페이스가 맞는 모듈을 조립하듯이 응용프로그램을 작성하기 위해서 사용.
+자바의 인터페이스
+클래스가 구현해야 할 메소드들이 선언되는 추상형  
+
+인터페이스 선언 : interface 키워드로 선언.
+Ex) public interface SerialDriver { … }  
+
+자바 인터페이스에 대한 변화
+Java 7까지 : 인터페이스는 상수와 추상 메소드로만 구성
+Java 8부터
+상수와 추상메소드 포함
+default 메소드 포함 (Java 8)
+private 메소드 포함 (Java 9)
+static 메소드 포함 (Java 9)  
+
+여전히 인터페이스에는 필드(멤버 변수) 선언 불가  
+
+
+
 abstract public String getName();  추상 메소드  
-abstract public String fail() { return "Good Bye"; }  추상 메소드 아님. 컴파일 오류
+abstract public String fail() { return "Good Bye"; }  추상 메소드 아님. 컴파일 오류  
 
 <b>추상 메소드를 가진 추상 클래스</b>
 
@@ -27,7 +65,7 @@ abstract class JComponent {
     }
 }
 ```
-추상 메소드를 상속받으면 추상클래스가 됨
+<b>추상 메소드를 상속받으면 추상클래스가 됨</b>
 ```
 abstract class A {  추상 클래스
     abstract public int add(int x, int y);  추상 메소드
@@ -43,7 +81,7 @@ A a = new A(); 컴파일 오류 추상 클래스의 인스턴스 생성 불가
 B b = new B(); 아래도 동일하게 오류
 
 ```
-추상 클래스를 구현한 서브 클래스는 추상 클래스가 아님 상속 X
+<b>추상 클래스를 구현한 서브 클래스는 추상 클래스가 아님</b> 상속 X
 (부분적으로만 가져온것)
 ```
 class C extends A { // 추상 클래스 구현. C는 정상 클래스
@@ -59,14 +97,48 @@ class C extends A { // 추상 클래스 구현. C는 정상 클래스
 C c = new C();  정상 실행
 
 ```
+예제
+```
+public class qqq {
+
+    abstract class Calculator {
+
+        public abstract int add(int a, int b);
+    
+        public abstract int subtract(int a, int b);
+    
+        public abstract double average(int[] a);
+    }
+
+    abstract class GoodCal extends Calculator { 
+        
+        @Override
+        public int add(int a, int b) { // 추상 메소드 구현
+            return a + b;
+        }
+
+        @Override
+        public int subtract(int a, int b) { 
+            return a - b;
+        }
+
+        @Override
+        public double average(int[] a) { 
+            double sum = 0;
+            for (int i = 0; i < a.length; i++)
+                sum += a[i];
+                return sum / a.length;
+        }
+
+}
+```
 
 
 
 
 
 
-
-<h2>2025 1학기 중간고사 범위</h2>
+<h2>2025 1학기 중간고사 이전 학습내용</h2>
 멤버 접근 지정
 
  public 멤버: 패키지에 관계없이 모든 클래스에게 접근 허용<br/>

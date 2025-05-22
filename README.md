@@ -5,9 +5,80 @@
 
 <b><h2>2025 05 22</h2></b>
 
-<b></b>
+<b>컬렉션</b>  
+여러 개의 데이터를 그룹으로 관리하는 자료구조의 집합  
+
+데이터의 추가, 삭제, 검색 등이 용이  
+다양한 자료구조(List, Set, Map 등) 제공  
+제네릭(Generic) 지원으로 타입 안정성 보장  
+
+배열: 고정된 크기, 같은 타입만 저장  
+컬렉션: 크기 변경 가능, 다양한 타입 저장 가능
+```
+컬렉션 생성문
+Vector<String> v = new Vector<>();  //자바 7 기준
+var v = new Vector<String>();  //자바 10 이후 기준
+```
+<b>Math 클래스</b>  
+
+수학 관련 다양한 메서드를 제공하는 클래스  
+
+모든 메서드는 static임에 유의  
+
+주요 메서드: Math.random() 등  
+
+random() : 0.0 이상 1.0 미만의 double형 난수 반환  
+(int)(Math.random()*n) : 0 이상 n 미만의 정수 난수 발생  
+(int)(Math.random()*n) + start : start 이상 (start+n) 미만의 정수 난수 발생  
+
+<b>StringTokenizer 클래스</b>  
+
+문자열을 구분자로 분리하는 클래스  
+구분자(delimiter): 문자열을 구분할 때 사용하는 문자  
+
+<b>주요 메소드</b>  
+  
+hasMoreTokens() : 남아있는 토큰이 있는지 검사  
+nextToken() : 다음 토큰을 반환  
+hasMoreTokens() : 남은 토큰이 있는지 확인  
+nextToken() : 다음 토큰 반환  
+```
+//예시 1
+StringTokenizer st = new StringTokenizer("apple/orange/banana", "/");
+
+//예시 2
+String query = "name=kitae&addr=seoul&age=21";
+StringTokenizer st = new StringTokenizer(query, "&");
+while(st.hasMoreTokens()) {
+    System.out.println(st.nextToken());
+  }
+
+//출력 결과
+name=kitae
+addr=seoul
+age=21
+
+```
 
 
+
+<b>StringBuffer 클래스</b>  
+가변 문자열을 위한 클래스  
+
+StringBuffer 객체 생성  
+StringBuffer sb = new StringBuffer();  
+
+String 클래스와 달리 문자열 변경 가능  
+
+문자열 추가, 삭제, 삽입, 변경 등 다양한 처리 가능  
+
+메모리 낭비 없이 문자열 처리 효율적  
+
+```
+//예시
+StringBuffer sb = new StringBuffer();
+sb.append("Java");
+```
 
 
 

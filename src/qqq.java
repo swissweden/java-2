@@ -9,5 +9,5 @@ public class qqq extends JFrame {
 
     public static void main(String[] args) {
         qqq mf = new qqq();
-    }
+    } // shift alt f 줄 자동 정렬
 }

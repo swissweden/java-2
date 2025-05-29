@@ -98,6 +98,16 @@ System.exit(0);
 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 ```
 
+```
+//jdk 1.5 이후
+getContentPane().setBackground(Color.ORANGE); // 오렌지색 배경 설정
+getContentPane().setLayout(new FlowLayout());
+
+//jdk 1.5 이전
+Container contentPane = getContentPane(); // 컨텐트팬 알아내기
+contentPane.setBackground(Color.ORANGE); // 오렌지색 배경 설정
+contentPane.setLayout(new FlowLayout()); 
+```
 
 
 

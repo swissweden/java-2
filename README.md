@@ -2,8 +2,52 @@
 
 ## !!Shift Alt F 줄 자동 정렬!!
 
+## <b>2025 05 29</b>
 
+Swing 응용프로그램에서 main()의 기능과 위치  
+스윙 응용프로그램에서 main()의 기능 최소화 바람직  
+스윙 응용프로그램이 실행되는 시작점으로서의 기능만  
+스윙 프레임을 생성하는 정도의 코드로 최소화  
 
+```
+public static void main(String[] args) {
+    MyFrame frame = new MyFrame(); // 스윙 프레임 생성
+}
+```
+
+**프레임에 컴포넌트 붙이기**
+타이틀 달기  
+super()나 setTitle() 이용  
+
+```
+public class MyFrame extends JFrame {
+    MyFrame() {
+        super("타이틀문자열");
+        setTitle("타이틀문자열");
+
+        // 프레임의 컨텐트팬을 알아낸다.
+        Container contentPane = getContentPane();
+    }
+}
+```  
+컨텐트팬에 컴포넌트 달기  
+**컨텐트팬이란?** 스윙 컴포넌트들이 부착되는 공간  
+컨텐트팬 알아내기 : 스윙 프레임에 붙은 디폴트 컨텐트팬 알아내기  
+컨텐트팬에 컴포넌트 붙이기  
+// 버튼 컴포넌트 생성
+
+```
+JButton button = new JButton("Click");
+contentPane.add(button); // 컨텐트팬에 버튼 부착
+```    
+
+```
+    class MyPanel extends JPanel {
+    // JPanel을 상속받아 새로운 패널을 구현한다.
+}
+// frame의 컨텐트팬을 MyPanel 객체로 변경
+frame.setContentPane(new MyPanel());
+```
 
 
 ## 스윙 gui 프로그램 만드는 과정  

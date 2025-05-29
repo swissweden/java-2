@@ -48,16 +48,6 @@ class MyPanel extends JPanel {
 // frame의 컨텐트팬을 MyPanel 객체로 변경
 frame.setContentPane(new MyPanel());
 ```
-
-
-## 스윙 gui 프로그램 만드는 과정  
-스윙 프레임 만들기
-main() 메소드 작성
-스윙 프레임에 스윙 컴포넌트 붙이기
-
-스윙 프레임 : 모든 스킬 컴포넌트를 담는 최상위 컨테이너
-프레임의 크기 반드시 지정 : setSize() 호출
-
 ```
 public class qqq extends JFrame {
     public qqq() {
@@ -81,7 +71,18 @@ public class qqq extends JFrame {
     }
 }
 ```
+실행 결과  
 ![Image](https://github.com/user-attachments/assets/ed037433-c47e-403e-988a-2371d17ce956)
+
+
+
+## 스윙 gui 프로그램 만드는 과정  
+스윙 프레임 만들기
+main() 메소드 작성
+스윙 프레임에 스윙 컴포넌트 붙이기
+
+스윙 프레임 : 모든 스킬 컴포넌트를 담는 최상위 컨테이너
+프레임의 크기 반드시 지정 : setSize() 호출
 
 
 

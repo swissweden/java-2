@@ -170,7 +170,30 @@ contentPane.setLayout(new FlowLayout());
 발생한 이벤트의 소스 컴포넌트 리턴  
 Object 타입으로 리턴하므로 캐스팅하여 사용  
 모든 이벤트 객체에 대해 적용  
+  
+이벤트와 이벤트 리스너 선택  
+버튼 클릭을 처리하고자 하는 경우  
+→ 이벤트: Action 이벤트, 이벤트 리스너: ActionListener  
+이벤트 리스너 클래스 작성: ActionListener 인터페이스 구현  
+```
+class MyActionListener implements ActionListener {
+    public void actionPerformed(ActionEvent e) { // 버튼이 클릭될 때 호출되는 메소드
+        JButton b = (JButton)e.getSource();      // 사용자가 클릭한 버튼 알아내기
+        if(b.getText().equals("Action"))         // 버튼의 문자열이 "Action"인지 비교
+            b.setText("액션");                   // JButton의 setText() 호출, 문자열 변경
+        else
+            b.setText("Action");                 // JButton의 setText() 호출, 문자열 변경
+    }
+}
+```
+이벤트를 받아 처리하고자 하는 컴포넌트에 이벤트 리스너 등록
+component.addXXXListener(listener)
+(XXX: 이벤트 명, listener: 이벤트 리스너 객체)
+```
+MyActionListener listener = new MyActionListener(); // 리스너 인스턴스 생성
+btn.addActionListener(listener);                    // 리스너 등록
 
+```
 
 <b><h2>2025 05 22</h2></b>
 

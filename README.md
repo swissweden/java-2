@@ -135,7 +135,7 @@ contentPane.setBackground(Color.ORANGE); // 오렌지색 배경 설정
 contentPane.setLayout(new FlowLayout()); 
 ```
 
-## 이벤트 기반 프로그래밍(Event Driven Programming)  
+**이벤트 기반 프로그래밍(Event Driven Programming)**    
 이벤트 발생에 의해 프로그램 흐름이 결정되는 방식   
 이벤트가 발생하면 이벤트를 처리하는 루틴(이벤트 리스너) 실행  
 실행될 코드는 이벤트의 발생에 의해 전적으로 결정  

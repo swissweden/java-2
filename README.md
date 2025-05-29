@@ -110,8 +110,19 @@ container.setLayout(null);
 ```
 추가된 컴포넌트의 크기 0으로 설정, 위치는 예측할 수 없게 됨  
 따라서 컴포넌트의 크기와 위치를 반드시 개발자가 직접 지정해야 하며, 그렇지 않으면 화면에 정상적으로 표시되지 않음.  
+Ex) 버튼 100×40 크기로 하고, JPanel의 (50, 50) 위치에 배치
+```
+JPanel p = new JPanel();
+p.setLayout(null); // 패널의 배치관리자 제거
+
+JButton clickButton = new JButton("Click");
+clickButton.setSize(100, 40);      // 버튼 크기를 100×40으로 지정
+clickButton.setLocation(50, 50);   // 버튼 위치를 (50, 50)으로 지정
+p.add(clickButton);                // 패널 (50, 50)에 100×40 크기의 버튼 추가
+```
 
 
+*참고*
 ```
 //jdk 1.5 이후
 getContentPane().setBackground(Color.ORANGE); // 오렌지색 배경 설정

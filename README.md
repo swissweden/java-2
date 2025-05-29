@@ -97,6 +97,20 @@ System.exit(0);
 ```
 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 ```
+**배치 관리자 4가지**
+FlowLayout  
+BorderLayout  
+GridLayout  
+CardLayout   
+
+**배치 관리자가 없는 컨테이너가 필요한 경우**  
+컨테이너의 배치 관리자 제거 방법  
+```
+container.setLayout(null);
+```
+추가된 컴포넌트의 크기 0으로 설정, 위치는 예측할 수 없게 됨  
+따라서 컴포넌트의 크기와 위치를 반드시 개발자가 직접 지정해야 하며, 그렇지 않으면 화면에 정상적으로 표시되지 않음.  
+
 
 ```
 //jdk 1.5 이후

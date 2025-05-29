@@ -81,8 +81,7 @@ public class qqq extends JFrame {
     }
 }
 ```
-https://github.com/swissweden/java-2/issues/1#issue-3098989301
-
+![Image](https://github.com/user-attachments/assets/ed037433-c47e-403e-988a-2371d17ce956)
 
 
 

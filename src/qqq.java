@@ -1,27 +1,13 @@
-class Circle {
-    int radius;
+import javax.swing.*;
 
-    public Circle(int radius) {
-        this.radius = radius;
+public class qqq extends JFrame {
+    public qqq() {
+        setTitle("300x300 스윙 프레임 만들기");
+        setSize(300, 300);
+        setVisible(true);
     }
-
-    public double getArea() {
-        return 3.14 * radius + radius;
-    }
-}
-
-public class qqq {
 
     public static void main(String[] args) {
-        Circle[] c;
-        c = new Circle[5];
-
-        for (int i = 0; i < c.length; i++)
-            c[i] = new Circle(i);
-
-        for (int i = 0; i < c.length; i++)
-            System.out.print((int) (c[i].getArea()) +  "");
+        qqq mf = new qqq();
     }
-     
-    
 }

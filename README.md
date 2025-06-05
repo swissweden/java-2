@@ -6,9 +6,9 @@
 
 <b>Key 이벤트와 포커스</b>   
 키 입력 시, 다음 세 경우 각각 Key 이벤트 발생  
-* 키를 누르는 순간(keyPressed)  
-* 누른 키를 떼는 순간(keyReleased)  
-* 누른 키를 떼는 순간(Unicode키의 경우에만, keyTyped)  
+* 키를 누르는 순간 (keyPressed)  
+* 누른 키를 떼는 순간 (keyReleased)  
+* 누른 키를 떼는 순간, 문자가 입력 될 때 (Unicode키의 경우에만, keyTyped)  
 
 <b>키 이벤트를 받을 수 있는 조건</b>
 모든 컴포넌트  
@@ -17,6 +17,19 @@
 <b>포커스(focus)</b>  
 컴포넌트나 응용프로그램이 키 이벤트를 독점하는 권한  
 컴포넌트에 포커스 설정 방법 : 다음 2 라인 코드 필요  
+
+<b>유니코드(Unicode) 키</b>
+유니코드 키의 특징  
+국제 산업 표준  
+전 세계의 문자를 컴퓨터에서 일관되게 표현하기 위한 코드 체계  
+문자들에 대해서만 키 코드 값 정의 : A~Z, a~z, 0~9, !, 0, & 등  
+문자가 아닌 키 경우에는 표준화된 키 코드 값 없음  
+<Function> 키, <Home> 키, <Up> 키, <Delete> 키, <Control> 키, <Shift> 키, <Alt> 등은 플랫폼에 따라 키 코드 값이 다를 수 있음  
+
+<b>유니코드 키가 입력되는 경우</b>  
+keyPressed(), keyTyped(), keyReleased()가 순서대로 호출  
+<b>유니코드 키가 아닌 경우</b>  
+keyPressed(), keyReleased()만 호출됨  
 
 
 

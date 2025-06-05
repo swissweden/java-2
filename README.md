@@ -72,6 +72,27 @@ public void keyPressed(KeyEvent e) {
 ```
 ![Image](https://github.com/user-attachments/assets/17f971ae-6cad-4fc3-b275-46bbc2761c8f)  
 
+마우스 리스너는 컴포넌트에 다음과 같이 등록  
+```
+component.addMouseListener(myMouseListener);
+```
+MouseMotion를 하고 싶으면 모션 리스너도 따로 등록해야 함  
+```
+component.addMouseMotionListener(myMouseMotionListener);
+```
+```
+public void mousePressed(MouseEvent e) {
+    int x = e.getX(); // 마우스가 눌러진 x좌표
+    int y = e.getY(); // 마우스가 눌러진 y좌표
+}
+public void mouseClicked(MouseEvent e) {
+    if(e.getClickCount() == 2) {
+        // 더블클릭 처리 예시
+    }
+}
+```
+
+
 ##<b>2025 05 29</b>
 
 <b>스윙 gui 프로그램 만드는 과정</b>  

@@ -4,7 +4,9 @@ import javax.swing.*;
 
 public class randomC extends JFrame {
     private JLabel la = new JLabel("<Enter>키를 입력하세요!");
-
+    
+    
+    
     public randomC() {
         super("KeyListener의 문자 키 입력 예제");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -12,6 +14,7 @@ public class randomC extends JFrame {
         Container c = getContentPane();
         c.setLayout(new FlowLayout());
         c.add(la);
+        
 
         c.addKeyListener(new MyKeyListener()); // 키 리스너 달기
         setSize(250, 150);
@@ -40,5 +43,13 @@ public class randomC extends JFrame {
 
     public static void main(String[] args) {
         new randomC();
+    }
+
+    public JLabel getLa() {
+        return la;
+    }
+
+    public void setLa(JLabel la) {
+        this.la = la;
     }
 }

@@ -35,10 +35,10 @@ keyPressed(), keyReleased()만 호출됨
 입력된 키 정보를 가진 이벤트 객체
 KeyEvent 객체의 메소드로 입력된 키 판별
 
-<b>char KeyEvent.getKeyChar()</b>
-키의 유니코드 문자 값 리턴
-Unicode 문자 키인 경우에만 의미 있음
-입력된 키를 판별하기 위해 문자 값과 비교하면 됨
+<b>char KeyEvent.getKeyChar()</b>  
+키의 유니코드 문자 값 리턴  
+Unicode 문자 키인 경우에만 의미 있음  
+입력된 키를 판별하기 위해 문자 값과 비교하면 됨  
 ```
 public void keyPressed(KeyEvent e) {
     if(e.getKeyChar() == 'q')
@@ -46,17 +46,18 @@ public void keyPressed(KeyEvent e) {
 }
 ```
 
-<b>int KeyEvent.getKeyCode()</b>
-유니코드 키 포함
-모든 키에 대한 정수형 키 코드 리턴
-입력된 키를 판별하기 위해 가상키(Virtual Key) 값과 비교해야 함
-가상 키 값은 KeyEvent 클래스에 상수로 선언
+<b>int KeyEvent.getKeyCode()</b>  
+유니코드 키 포함  
+모든 키에 대한 정수형 키 코드 리턴  
+입력된 키를 판별하기 위해 가상키(Virtual Key) 값과 비교해야 함  
+가상 키 값은 KeyEvent 클래스에 상수로 선언  
 ```
 public void keyPressed(KeyEvent e) {
     if(e.getKeyCode() == KeyEvent.VK_F5)
         System.exit(0);
 }
 ```
+
 
 ##<b>2025 05 29</b>
 

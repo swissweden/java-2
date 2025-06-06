@@ -95,7 +95,7 @@ public void mouseClicked(MouseEvent e) {
 ```
 
 
-##<b>2025 05 29</b>
+## <b>2025 05 29</b>
 
 <b>스윙 gui 프로그램 만드는 과정</b>  
 스윙 프레임 만들기  
